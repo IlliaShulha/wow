@@ -1,0 +1,182 @@
+{
+    "Yacht Cleaning":
+      {"id": "0",
+        "title": "Yacht Cleaning",
+              "image": "/wow-images-png/yachtcleaning.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Steam Power":
+      {"id": "1",
+      "title": "Steam Power",
+              "image": "/wow-images-png/steampower.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Move in/out cleaning":
+      {"id": "2",
+      "title": "Move in/out cleaning",
+              "image": "/wow-images-png/moveinout.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Fresh curtains":
+      {"id": "3",
+      "title": "Fresh curtains",
+              "image": "/wow-images-png/freshcurtains.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Kosher cleaning":
+      {"id": "4",
+      "title": "Kosher cleaning",
+              "image": "/wow-images-png/koshercleaning.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Shiny kitchen ethalon":
+      {"id": "5",
+      "title": "Shiny kitchen ethalon",
+              "image": "/wow-images-png/kitchenclean.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Bust a dust":
+      {"id": "6",
+      "title": "Bust a dust",
+              "image": "/wow-images-png/bustadust.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Soft & Fresh carpets":
+      {"id": "7",
+      "title": "Soft & Fresh carpets",
+              "image": "/wow-images-png/softcarpets.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Balcony upgrade":
+      {"id": "8",
+      "title": "Balcony upgrade",
+              "image": "/wow-images-png/balconyUpgrade.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Germ-Free cleaning":
+      {"id": "9",
+      "title": "Germ-Free cleaning",
+              "image": "/wow-images-png/germfree.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Afterparty cleaning":
+      {"id": "10",
+      "title": "Afterparty cleaning",
+              "image": "/wow-images-png/afterpartyclean.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Window washing":
+      {"id": "11",
+      "title": "Window washing",
+              "image": "/wow-images-png/windowclean.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Laundry Service":
+      {"id": "12",
+      "title": "Laundry Service",
+              "image": "/wow-images-png/laundryservice.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Blinds Cleaning":
+      {"id": "13",
+      "title": "Blinds cleaning",
+              "image": "/wow-images-png/blindsclean.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Worry-free pregnancy cleaning":
+      {"id": "14",
+      "title": "Worry-free pregnancy cleaning",
+              "image": "/wow-images-png/pregnantclean.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Perfumer's perfection":
+      {"id": "15",
+      "title": "Perfumer's perfection",
+              "image": "/wow-images-png/perfumerclean.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Lab-alike cleanliness":
+      {"id": "16",
+      "title": "Lab-alike cleanliness",
+              "image": "/wow-images-png/labclean.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Alergens-free cleaning":
+      {"id": "17",
+      "title": "Alergens-free cleaning",
+              "image": "/wow-images-png/alergensfree.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Kids chaos cleaning":
+      {"id": "18",
+      "title": "Kids chaos cleaning",
+              "image": "/wow-images-png/kidsclean.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Everyday freshness":
+      {"id": "19",
+      "title": "Everyday freshness",
+              "image": "/wow-images-png/everydayfresh.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Shiny penny bathroom":
+      {"id": "20",
+      "title": "Shiny penny bathroom",
+              "image": "/wow-images-png/shinybathroom.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      },
+      "Airbnb homestays cleaning":
+      {"id": "21",
+      "title": "Airbnb homestays cleaning",
+              "image": "/wow-images-png/airbnbclean.png",
+              "price": "{ regular: '50.00 $' }",
+              "rating": "{ max: 5, score: 4 }",
+              "isInWishlist": false
+      }
+    
+    
+  }
+    
+
