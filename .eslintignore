@@ -2,7 +2,7 @@
 **/lib/*
 **/tests/*
 packages/composables/nuxt/plugin.js
-packages/theme/_theme
+packages/theme/wow-theme
 packages/theme/.nuxt
 packages/theme/middleware.config.js
 packages/theme/nuxt.config.js
