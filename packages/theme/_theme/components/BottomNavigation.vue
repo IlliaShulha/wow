@@ -6,22 +6,43 @@
       icon="homeHex" iconSize="24px" label="Home"
       @click="handleHomeClick"
     />
+    <!--<BottomNavigationItem icon= "more" size="20px" label="Menu" @click="toggleMobileMenu"/>-->
     <BottomNavigationItem icon="empty_cart" iconSize="24px" label="Cart" @click="toggleCartSidebar"/>
+    <!--<BottomNavigationItem icon="profile" size="20px" label="Account" @click="handleAccountClick"/>-->
+    <!-- TODO: add logic for label - if on Home then Basket, if on PDC then AddToCart etc. -->
     <BottomNavigationItem
       label="Menu"
       icon="threeDotsHor"
       iconSize = "24px"
       @click="toggleMobileMenu"
     >
+    <!--
+      <template #icon>
+        <div class = "more_options_icon">
+        <SfCircleIcon class="cart-button" aria-label="MoreOptions">
+          <SfIcon
+            icon="more"
+            color="white"
+            size="25px"
+            :style="{margin: '0 0 0 -2px'}"
+          />
+        </SfCircleIcon>
+        
+      </div>
+      </template>
+      -->
     </BottomNavigationItem>
   </WowBottomNavigation>
 </template>
+
 <script>
 import { WowBottomNavigation, SfIcon, SfCircleIcon, SfBadge } from '@storefront-ui/vue';
 import { useUiState } from '~/composables';
 import { useUser, useCart, cartGetters } from '@vue-storefront/wow';
 import { computed, useRoute, useRouter } from '@nuxtjs/composition-api';
 import { addBasePath } from '@vue-storefront/core';
+
+
 export default {
   components: {
     WowBottomNavigation,
@@ -42,6 +63,7 @@ export default {
       }
       toggleLoginModal();
     };
+
     const handleHomeClick = () => {
       isMobileMenuOpen.value ? toggleMobileMenu() : false;
       router.push('/');
@@ -52,7 +74,7 @@ export default {
 
       return count ? count.toString() : null;
     });
-    const menuOptionIcon = addBasePath('/wow-images-png/steampower.png');
+    const menuOptionIcon = addBasePath("/wow-images-png/steampower.png");
     return {
       route,
       isMobileMenuOpen,
