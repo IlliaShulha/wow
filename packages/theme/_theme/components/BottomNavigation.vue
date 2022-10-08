@@ -17,7 +17,7 @@
 </template>
 <script>
 import { WowBottomNavigation, SfIcon, SfCircleIcon, SfBadge } from '@storefront-ui/vue';
-//import { useUiState } from '~/composables';
+import { useUiState } from '~/composables';
 import { useUser, useCart, cartGetters } from '@vue-storefront/wow';
 import { computed, useRoute, useRouter } from '@nuxtjs/composition-api';
 import { addBasePath } from '@vue-storefront/core';
@@ -31,7 +31,7 @@ export default {
   setup() {
     const route = useRoute();
     const router = useRouter();
-    const { toggleCartSidebar, toggleWishlistSidebar, toggleLoginModal, toggleMobileMenu, isMobileMenuOpen } = null;//useUiState();
+    const { toggleCartSidebar, toggleWishlistSidebar, toggleLoginModal, toggleMobileMenu, isMobileMenuOpen } = useUiState();
     const { isAuthenticated } = useUser();
     const { cart } = useCart();
     const handleAccountClick = async () => {

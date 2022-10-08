@@ -101,7 +101,7 @@ import { ref, useContext } from '@nuxtjs/composition-api';
 import InstagramFeed from '~/components/InstagramFeed.vue';
 import NewsletterModal from '~/components/NewsletterModal.vue';
 import LazyHydrate from 'vue-lazy-hydration';
-//import { useUiState } from '../composables';
+import { useUiState } from '../composables';
 import { addBasePath } from '@vue-storefront/core';
 import productsList from '../static/productsData.json';
 export default {
@@ -125,7 +125,7 @@ export default {
   },
   setup() {
     const { $config } = useContext();
-    const { toggleNewsletterModal } = null;//useUiState();
+    const { toggleNewsletterModal } = useUiState();
     const products = ref(productsList);
     const banners = [
       {

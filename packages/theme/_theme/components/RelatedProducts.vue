@@ -32,8 +32,8 @@ import {
   SfSection,
   SfLoader
 } from '@storefront-ui/vue';
-import { productGetters, useWishlist, wishlistGetters, useCart } from '@vue-storefront/wow';
-import { computed } from '@vue/composition-api';
+import { productGetters, useWishlist, useCart } from '@vue-storefront/wow';
+//  import { computed } from '@vue/composition-api';
 import { addBasePath } from '@vue-storefront/core';
 export default {
   name: 'RelatedProducts',
@@ -50,7 +50,7 @@ export default {
   },
   setup() {
     const { addItem: addItemToCart, isInCart } = useCart();
-    const { addItem: addItemToWishlist, isInWishlist, wishlist } = useWishlist();
+    const { addItem: addItemToWishlist, isInWishlist} = useWishlist();
     return {
       productGetters,
       addItemToWishlist,
