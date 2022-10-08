@@ -20,7 +20,7 @@ const state = reactive<Notifications>({
 const maxVisibleNotifications = 3;
 const timeToLive = 3000;
 
-const useUiNotification = () => {
+const useUiNotification = (notificationsList) => {
   const send = (notification: UiNotification) => {
     const id = Symbol();
 

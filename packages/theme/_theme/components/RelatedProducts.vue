@@ -26,7 +26,6 @@
     </SfLoader>
   </SfSection>
 </template>
-
 <script lang="ts">
 import {
   SfCarousel,
@@ -37,7 +36,6 @@ import {
 import { productGetters, useWishlist, wishlistGetters, useCart } from '@vue-storefront/wow';
 import { computed } from '@vue/composition-api';
 import { addBasePath } from '@vue-storefront/core';
-
 export default {
   name: 'RelatedProducts',
   components: {
@@ -53,7 +51,7 @@ export default {
   },
   setup() {
     const { addItem: addItemToCart, isInCart } = useCart();
-    const { addItem: addItemToWishlist, isInWishlist, removeItem: removeItemFromWishlist, wishlist } = useWishlist();
+    const { addItem: addItemToWishlist, isInWishlist, wishlist } = useWishlist();
     const removeProductFromWishlist = (productItem) => {
       const productsInWhishlist = computed(() => wishlistGetters.getItems(wishlist.value));
     };
@@ -69,12 +67,10 @@ export default {
   }
 };
 </script>
-
 <style lang="scss" scoped>
 .section {
   margin-top: var(--spacer-base);
 }
-
 .carousel {
     margin: 0 calc(0 - var(--spacer-sm)) 0 0;
   @include for-desktop {
@@ -84,5 +80,4 @@ export default {
     margin: 1.9375rem 0 2.4375rem 0;
   }
 }
-
 </style>

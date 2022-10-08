@@ -1,23 +1,17 @@
 
 <template>
   <body>
-  
   <div id="home">
-    
     <LazyHydrate when-idle>
       <div class = "center"><SfImage
       src="/wowUI/logoshenhome.png"
-    
       /></div>
-      
     </LazyHydrate>
-    
     <LazyHydrate when-visible>
         <div class="sf-heading">
           <h2 class="sf-heading__title h6">Hot Offers</h2>
           <div class="sf-heading__description display-none"></div>
         </div>
-
     </LazyHydrate>
     <div class = "hot-offers">
     <LazyHydrate when-visible>
@@ -51,7 +45,6 @@
             />
           </SfCarouselItem>
         </SfCarousel>
-      
     </LazyHydrate>
   </div>
     <LazyHydrate when-visible>
@@ -71,14 +64,9 @@
             v-for="(product, i) in products "
             :key = "product.id"
             :style="{ '--index': i }"
-            
-            
             :title="product.title"
             :image="product.image"
-            
             :regular-price="product.price.regular"
-            
-            
             :is-in-wishlist="product.isInWishlist"
             :show-add-to-cart-button="true"
             image-tag="nuxt-img"
@@ -93,12 +81,9 @@
         </transition-group>
         </div>
     </LazyHydrate>
-
-  
   </div>
   </body>
 </template>
-
 <script>
 import {
   SfHero,
@@ -121,7 +106,6 @@ import LazyHydrate from 'vue-lazy-hydration';
 import { useUiState } from '../composables';
 import { addBasePath } from '@vue-storefront/core';
 import productsList from '../static/productsData.json';
-
 export default {
   name: 'Home',
   components: {
@@ -145,8 +129,6 @@ export default {
     const { $config } = useContext();
     const { toggleNewsletterModal } = useUiState();
     const products = ref(productsList);
-    
-    
     const banners = [
       {
         slot: 'banner-A',
@@ -190,16 +172,13 @@ export default {
         link: $config.theme.home.bannerD.link
       }
     ];
-
     const onSubscribe = (emailAddress) => {
       console.log(`Email ${emailAddress} was added to newsletter.`);
       toggleNewsletterModal();
     };
-
     const toggleWishlist = (index) => {
       products.value[index].isInWishlist = !products.value[index].isInWishlist;
     };
-
     return {
       toggleWishlist,
       toggleNewsletterModal,
@@ -212,7 +191,6 @@ export default {
   }
 };
 </script>
-
 <style lang="scss" scoped>
 #home {
   background-image: repeating-linear-gradient(#ffffff, #37D0C3 30%, #ffffff 60%,  #37D0C3 70%, #ffffff);
@@ -257,7 +235,6 @@ export default {
     }
   }
 }
-
 .banner-grid {
   --banner-container-width: 50%;
   margin: var(--spacer-xl) 0;
@@ -272,7 +249,6 @@ export default {
     }
   }
 }
-
 .banner {
   &__tshirt {
     background-position: left;
@@ -283,7 +259,6 @@ export default {
     }
   }
 }
-
 .similar-products {
   display: flex;
   justify-content: space-between;
@@ -297,7 +272,6 @@ export default {
     padding-bottom: 0;
   }
 }
-
 .call-to-action {
   background-position: right;
   margin: var(--spacer-xs) 0;
@@ -305,7 +279,6 @@ export default {
     margin: var(--spacer-xl) 0 var(--spacer-2xl) 0;
   }
 }
-
 .carousel {
     margin: 0 calc(0 - var(--spacer-sm)) 0 0;
     
@@ -422,14 +395,11 @@ export default {
     }
   }
 }
-
 .hot-offers {
   background-color: rgba(55, 208, 195, 0.3);
   border-radius: 0%;
   width: 109% !important;
   margin-left:-5%;
-  
   padding: 0 0% 0 0% !important;
-  
 }
 </style>

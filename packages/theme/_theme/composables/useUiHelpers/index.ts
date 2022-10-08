@@ -1,5 +1,5 @@
 
-const useUiHelpers = () => {
+const useUiHelpers = (facets) => {
   const getFacetsFromURL = () => {
     console.warn('[VSF] please implement useUiHelpers.getFacets.');
 

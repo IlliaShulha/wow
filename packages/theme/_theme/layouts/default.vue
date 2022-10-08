@@ -1,20 +1,15 @@
 <template>
   <div>
-    
-   
     <div id="layout">
       <nuxt :key="route.fullPath"/>
-
       <BottomNavigation />
       <CartSidebar />
       <WishlistSidebar />
       <LoginModal />
       <Notification />
     </div>
-    
   </div>
 </template>
-
 <script>
 import AppHeader from '~/components/AppHeader.vue';
 import BottomNavigation from '~/components/BottomNavigation.vue';
@@ -28,10 +23,8 @@ import Notification from '~/components/Notification';
 import { onSSR } from '@vue-storefront/core';
 import { useRoute } from '@nuxtjs/composition-api';
 import { useCart, useStore, useUser, useWishlist } from '@vue-storefront/wow';
-
 export default {
   name: 'DefaultLayout',
-
   components: {
     LazyHydrate,
     TopBar,
@@ -43,14 +36,12 @@ export default {
     LoginModal,
     Notification
   },
-
   setup() {
     const route = useRoute();
     const { load: loadStores } = useStore();
     const { load: loadUser } = useUser();
     const { load: loadCart } = useCart();
     const { load: loadWishlist } = useWishlist();
-
     onSSR(async () => {
       await Promise.all([
         loadStores(),
@@ -59,17 +50,14 @@ export default {
         loadWishlist()
       ]);
     });
-
     return {
       route
     };
   }
 };
 </script>
-
 <style lang="scss">
 @import "~@storefront-ui/vue/styles";
-
 #layout {
   box-sizing: border-box;
   @include for-desktop {
@@ -77,13 +65,10 @@ export default {
     margin: auto;
   }
 }
-
 .no-scroll {
   overflow: hidden;
   height: 100vh;
 }
-
-// Reset CSS
 html {
   width: auto;
   @include for-mobile {
