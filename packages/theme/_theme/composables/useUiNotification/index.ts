@@ -20,8 +20,8 @@ const state = reactive<Notifications>({
 });
 const maxVisibleNotifications = 3;
 const timeToLive = 3000;
-
-const useUiNotification = (notificationsList) => {
+// eslint-disable-next-line
+const useUiNotification = () => {
   const send = (notification: UiNotification) => {
     const id = Symbol();
 

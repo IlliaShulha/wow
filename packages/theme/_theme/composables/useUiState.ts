@@ -9,6 +9,7 @@ const state = reactive({
   isFilterSidebarOpen: false,
   isMobileMenuOpen: false
 });
+// eslint-disable-next-line
 const useUiState = (uiState) => {
   const isMobileMenuOpen = computed(() => state.isMobileMenuOpen);
   const toggleMobileMenu = () => {

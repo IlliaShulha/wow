@@ -1,6 +1,7 @@
-
+// eslint-disable-next-line
 const useUiHelpers = () => {
-  const getFacetsFromURL = (facets) => {
+  // eslint-disable-next-line
+  const getFacetsFromURL = () => {
     console.warn('[VSF] please implement useUiHelpers.getFacets.');
 
     return {
@@ -8,20 +9,19 @@ const useUiHelpers = () => {
       page: 1
     } as any;
   };
+  
   // eslint-disable-next-line
   const getCatLink = (category): string => {
     console.warn('[VSF] please implement useUiHelpers.getCatLink.');
 
     return '/';
   };
-
   // eslint-disable-next-line
   const changeSorting = (sort) => {
     console.warn('[VSF] please implement useUiHelpers.changeSorting.');
 
     return 'latest';
   };
-
   // eslint-disable-next-line
   const changeFilters = (filters) => {
     console.warn('[VSF] please implement useUiHelpers.changeFilters.');
@@ -56,7 +56,7 @@ const useUiHelpers = () => {
   };
 
   return {
-    getFacetsFromURL,
+//    getFacetsFromURL,
     getCatLink,
     changeSorting,
     changeFilters,
