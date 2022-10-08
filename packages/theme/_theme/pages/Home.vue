@@ -205,7 +205,6 @@ export default {
   justify-content: center;
   margin-top: 1rem;
   border-style: none;
-  
 }
 .hero {
   margin: var(--spacer-xl) auto var(--spacer-lg);
@@ -318,8 +317,6 @@ export default {
     }
   }
   &__product-card {
-    //background-repeat: no-repeat; 
-    //background-size: cover;
     background-color: rgba(55, 208, 195, 0.5);
     border-color: rgba(55, 208, 195, 1);
     border-width: 1px;
