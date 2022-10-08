@@ -56,4 +56,4 @@ export type Store = TODO;
 
 export type Wishlist = TODO;
 
-export type WishlistItem = { variant: string;};
+export type WishlistItem = { variant: { sku: string;};};
