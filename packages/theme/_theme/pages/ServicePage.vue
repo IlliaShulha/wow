@@ -8,7 +8,6 @@
       <LazyHydrate when-idle>
         <SfGallery :images="productGallery" class="product__gallery" />
       </LazyHydrate>
-
       <div class="product__info">
         <div class="product__header">
           <SfHeading
@@ -85,7 +84,6 @@
             @click="addItem({ product, quantity: parseInt(qty) })"
           />
         </div>
-
         <LazyHydrate when-idle>
           <SfTabs :open-tab="1" class="product__tabs">
             <SfTab title="Description">
@@ -142,7 +140,6 @@
         </LazyHydrate>
       </div>
     </div>
-
     <LazyHydrate when-visible>
       <RelatedProducts
         :products="relatedProducts"
@@ -154,7 +151,6 @@
     <LazyHydrate when-visible>
       <InstagramFeed />
     </LazyHydrate>
-
   </div>
 </template>
 <script>
@@ -177,7 +173,6 @@ import {
   SfButton,
   SfColor
 } from '@storefront-ui/vue';
-
 import InstagramFeed from '~/components/InstagramFeed.vue';
 import RelatedProducts from '~/components/RelatedProducts.vue';
 import { ref, computed, useRoute, useRouter } from '@nuxtjs/composition-api';
@@ -185,7 +180,6 @@ import { useProduct, useCart, productGetters, useReview, reviewGetters } from '@
 import { onSSR } from '@vue-storefront/core';
 import LazyHydrate from 'vue-lazy-hydration';
 import { addBasePath } from '@vue-storefront/core';
-
 export default {
   name: 'ServicePage',
   transition: 'fade',
@@ -205,7 +199,6 @@ export default {
     const configuration = computed(() => productGetters.getAttributes(product.value, ['color', 'size']));
     const categories = computed(() => productGetters.getCategoryIds(product.value));
     const reviews = computed(() => reviewGetters.getItems(productReviews.value));
-
     // TODO: Breadcrumbs are temporary disabled because productGetters return undefined. We have a mocks in data
     // const breadcrumbs = computed(() => productGetters.getBreadcrumbs ? productGetters.getBreadcrumbs(product.value) : props.fallbackBreadcrumbs);
     const productGallery = computed(() => productGetters.getGallery(product.value).map(img => ({
@@ -214,13 +207,11 @@ export default {
       big: { url: addBasePath(img.big) },
       alt: product.value._name || product.value.name
     })));
-
     onSSR(async () => {
       await search({ id: id.value });
       await searchRelatedProducts({ catId: [categories.value[0]], limit: 8 });
       await searchReviews({ productId: id.value });
     });
-
     const updateFilter = (filter) => {
       router.push({
         path: route.value.path,
@@ -230,7 +221,6 @@ export default {
         }
       });
     };
-
     return {
       updateFilter,
       configuration,
@@ -321,7 +311,6 @@ export default {
   }
 };
 </script>
-
 <style lang="scss" scoped>
 #servicePage {
   box-sizing: border-box;

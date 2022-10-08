@@ -38,9 +38,10 @@
               :score-rating="product.rating.score"
               :show-add-to-cart-button="true"
               :is-on-wishlist="product.isInWishlist"
-              :link="localePath({ name: 'home' })"
+              :link="localePath({ name: 'servicePage' })"
               class="carousel__item__product"
               @click:wishlist="toggleWishlist(i)"
+              @click = "goToService()"
             />
           </SfCarouselItem>
         </SfCarousel>
@@ -68,6 +69,7 @@
             :is-in-wishlist="product.isInWishlist"
             :show-add-to-cart-button="true"
             image-tag="nuxt-img"
+            :link="localePath({ name: 'servicePage' })"
             :nuxt-img-config="{
               format: 'png',
               fit: 'cover',
@@ -186,6 +188,11 @@ export default {
       products,
       isGridView: true
     };
+  },
+  methods: {
+    goToservice() {
+      console.log("clicked");
+    }
   }
 };
 </script>
