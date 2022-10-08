@@ -1,6 +1,6 @@
 
-const useUiHelpers = (facets) => {
-  const getFacetsFromURL = () => {
+const useUiHelpers = () => {
+  const getFacetsFromURL = (facets) => {
     console.warn('[VSF] please implement useUiHelpers.getFacets.');
 
     return {
@@ -8,7 +8,6 @@ const useUiHelpers = (facets) => {
       page: 1
     } as any;
   };
-
   // eslint-disable-next-line
   const getCatLink = (category): string => {
     console.warn('[VSF] please implement useUiHelpers.getCatLink.');
@@ -70,3 +69,4 @@ const useUiHelpers = (facets) => {
 };
 
 export default useUiHelpers;
+

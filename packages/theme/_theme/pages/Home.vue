@@ -20,8 +20,7 @@
             <SfArrow
               aria-label="prev"
               class="sf-arrow--left sf-arrow--long"
-              @click="go('prev')"
-            />
+              @click="go('prev')"/>
           </template>
           <template #next="{go}">
             <SfArrow
@@ -58,8 +57,7 @@
           appear
           name="products__slide"
           tag="div"
-          class="products__grid"
-        >
+          class="products__grid">
           <ProductCardForMobile
             v-for="(product, i) in products "
             :key = "product.id"
@@ -103,7 +101,7 @@ import { ref, useContext } from '@nuxtjs/composition-api';
 import InstagramFeed from '~/components/InstagramFeed.vue';
 import NewsletterModal from '~/components/NewsletterModal.vue';
 import LazyHydrate from 'vue-lazy-hydration';
-import { useUiState } from '../composables';
+//import { useUiState } from '../composables';
 import { addBasePath } from '@vue-storefront/core';
 import productsList from '../static/productsData.json';
 export default {
@@ -127,7 +125,7 @@ export default {
   },
   setup() {
     const { $config } = useContext();
-    const { toggleNewsletterModal } = useUiState();
+    const { toggleNewsletterModal } = null;//useUiState();
     const products = ref(productsList);
     const banners = [
       {
@@ -281,12 +279,10 @@ export default {
 }
 .carousel {
     margin: 0 calc(0 - var(--spacer-sm)) 0 0;
-    
   @include for-desktop {
     margin: 0;
   }
   &__item {
-    
     margin: 1rem 0 -3rem 0%; //controlls spacing of carousel element on the page
     @include for-desktop {
       margin: var(--spacer-xl) 0 var(--spacer-xl) 0;
@@ -308,7 +304,6 @@ export default {
 }
 .products {
   box-sizing: border-box;
-  
   flex: 1;
   margin: 0;
   &__grid,
@@ -325,7 +320,6 @@ export default {
   &__product-card {
     //background-repeat: no-repeat; 
     //background-size: cover;
-    
     background-color: rgba(55, 208, 195, 0.5);
     border-color: rgba(55, 208, 195, 1);
     border-width: 1px;

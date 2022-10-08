@@ -18,7 +18,6 @@
             :is-added-to-cart="isInCart({ product })"
             :link="localePath(`/p/${productGetters.getId(product)}/${productGetters.getSlug(product)}`)"
             class="product-card"
-            @click:wishlist="!isInWishlist({ product }) ? addItemToWishlist({ product }) : removeProductFromWishlist(product)"
             @click:add-to-cart="addItemToCart({ product, quantity: 1 })"
           />
         </SfCarouselItem>
@@ -52,14 +51,10 @@ export default {
   setup() {
     const { addItem: addItemToCart, isInCart } = useCart();
     const { addItem: addItemToWishlist, isInWishlist, wishlist } = useWishlist();
-    const removeProductFromWishlist = (productItem) => {
-      const productsInWhishlist = computed(() => wishlistGetters.getItems(wishlist.value));
-    };
     return {
       productGetters,
       addItemToWishlist,
       isInWishlist,
-      removeProductFromWishlist,
       addItemToCart,
       isInCart,
       addBasePath
