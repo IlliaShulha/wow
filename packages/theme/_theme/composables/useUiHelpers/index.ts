@@ -9,7 +9,6 @@ const useUiHelpers = () => {
       page: 1
     } as any;
   };
-  
   // eslint-disable-next-line
   const getCatLink = (category): string => {
     console.warn('[VSF] please implement useUiHelpers.getCatLink.');
@@ -56,7 +55,7 @@ const useUiHelpers = () => {
   };
 
   return {
-//    getFacetsFromURL,
+    getFacetsFromURL,
     getCatLink,
     changeSorting,
     changeFilters,
