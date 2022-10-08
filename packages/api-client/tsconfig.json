@@ -4,6 +4,7 @@
     "outDir": "./lib",
     "rootDir": "./src",
     "baseUrl": "./",
+    "allowJs": true,
     "lib": []
   },
   "include": [
@@ -11,7 +12,7 @@
   ],
   "exclude": [
     "__tests__",
-    "lib",
+    "./lib",
     "node_modules"
   ]
 }
